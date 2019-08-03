@@ -6,7 +6,8 @@ const app = express();
 const morgan = require('morgan');
 
 //settings
-app.set('port', 3030);//variable del puerto
+app.set('port', process.env.PORT || 3030);//variable del puerto
+app.set('json spaces', 2);
 
 
 //ejecutando middlewares 
@@ -16,6 +17,12 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 //usar y recibir formatos json y entenderlos
 app.use(express.json());
+
+// routes
+app.use(require('./routes/index'));
+
+
+
 
 //starting the server
 app.listen(app.get('port'), () => {
