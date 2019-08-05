@@ -6,7 +6,7 @@ const app = express();
 const morgan = require('morgan');
 
 //settings
-app.set('port', process.env.PORT || 3030);//variable del puerto
+app.set('port', process.env.PORT || 8080);//variable del puerto
 app.set('json spaces', 2);
 
 
@@ -20,7 +20,8 @@ app.use(express.json());
 
 // routes
 app.use(require('./routes/index'));
-
+app.use('/api/movies',require('./routes/movies'));
+app.use('/api/users', require('./routes/users'));
 
 
 

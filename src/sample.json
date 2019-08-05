@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+        "title": "Depredadores",
+        "director": "James Cameron",
+        "year": "1986",
+        "rating": "8.5"
+    },
+    {
+        "id": "2",
+        "title": "Camino Real",
+        "director": "Woody Alans",
+        "year": "1996",
+        "rating": "8.5"
+    }
+]
